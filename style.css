@@ -1,0 +1,49 @@
+.variation-boxes {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.variation-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+    font-family: "RESOTHO", sans-serif, serif;
+    width: fit-content;
+}
+
+
+.variation-box:hover {
+    border-color: #888;
+}
+
+.variation-box.selected {
+    border-color: black;
+    font-weight: bold;
+    background-color: #f3f3f3;
+}
+
+.variation-boxes + select {
+    display: none;
+}
+
+/* Hide label column */
+.variations .label {
+    display: none !important;
+}
+
+/* Hide the select dropdown */
+.variation-boxes + select {
+    display: none !important;
+}
+
