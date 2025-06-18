@@ -47,3 +47,20 @@
     display: none !important;
 }
 
+
+.variation-box.out-of-stock {
+    opacity: 0.5;
+    position: relative;
+    pointer-events: none;
+}
+
+.variation-box.out-of-stock::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: red;
+    transform: rotate(-10deg);
+}

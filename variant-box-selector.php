@@ -22,19 +22,42 @@ add_filter('woocommerce_dropdown_variation_attribute_options_html', function ($h
     }
 
     $select_name = 'attribute_' . sanitize_title($attribute);
-
     $boxes = '<div class="variation-boxes">';
+
+    $available_variations = $product->get_available_variations();
+
     foreach ($options as $option) {
         $label = wc_attribute_label($option, $product);
+        $is_in_stock = false;
+
+        // Loop through variations to check if this option is in stock
+        foreach ($available_variations as $variation) {
+            $attributes = $variation['attributes'] ?? [];
+            if (
+                isset($attributes[$select_name]) &&
+                $attributes[$select_name] === $option &&
+                $variation['is_in_stock']
+            ) {
+                $is_in_stock = true;
+                break;
+            }
+        }
+
+        $class = 'variation-box';
+        if (!$is_in_stock) {
+            $class .= ' out-of-stock';
+        }
+
         $boxes .= sprintf(
-            '<div class="variation-box" data-attribute="%s" data-value="%s">%s</div>',
+            '<div class="%s" data-attribute="%s" data-value="%s">%s</div>',
+            esc_attr($class),
             esc_attr($select_name),
             esc_attr($option),
             esc_html($label)
         );
     }
+
     $boxes .= '</div>';
 
     return $boxes . $html;
 }, 20, 2);
-

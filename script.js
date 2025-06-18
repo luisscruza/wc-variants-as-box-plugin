@@ -4,6 +4,12 @@ jQuery(document).ready(function ($) {
     }
     // Delegate click to document to ensure it catches dynamically loaded elements
     $(document).on('click', '.variation-box', function () {
+        if ($(this).hasClass('out-of-stock')) {
+            const form = $(this).closest('form.variations_form');
+            form.find('.variation-box').removeClass('selected');
+            form.find('select').val('').trigger('change');
+			return;
+		}
 
         const value = $(this).data('value');
         const attributeName = $(this).data('attribute');
