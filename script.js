@@ -9,8 +9,11 @@ jQuery(document).ready(function ($) {
             form.find('.variation-box').removeClass('selected');
             form.find('select').val('').trigger('change');
             
-            // Show email notification form for out-of-stock items
-            showEmailNotificationForm($(this));
+            // Check if notifications are enabled before showing the form
+            if (variant_box_ajax.notifications_enabled == '1') {
+                // Show email notification form for out-of-stock items
+                showEmailNotificationForm($(this));
+            }
             return;
         }
 
