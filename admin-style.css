@@ -1,0 +1,112 @@
+/* Admin styles for Stock Notifications */
+.variant-notifications-admin .card {
+    margin-top: 20px;
+}
+
+.variant-notifications-admin .card h2,
+.variant-notifications-admin .card h3 {
+    margin-top: 0;
+}
+
+.variant-notifications-admin .dashicons {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Status indicators */
+.status-pending {
+    color: #f56e28;
+}
+
+.status-notified {
+    color: #46b450;
+}
+
+/* Title count styling */
+.title-count {
+    color: #666;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* Stats dashboard styling */
+.variant-notifications-admin .card p {
+    margin: 10px 0;
+}
+
+/* Enhanced table styling */
+.variant-notifications-admin .wp-list-table td {
+    vertical-align: middle;
+}
+
+.variant-notifications-admin .wp-list-table td strong {
+    font-weight: 600;
+}
+
+/* Settings form improvements */
+.variant-notifications-admin .form-table th {
+    width: 200px;
+}
+
+.variant-notifications-admin .description {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Action required box */
+.variant-notifications-admin .card[style*="border-left"] {
+    background-color: #fef7f0;
+}
+
+/* Responsive improvements */
+@media (max-width: 782px) {
+    .variant-notifications-admin .wp-list-table {
+        font-size: 14px;
+    }
+    
+    .variant-notifications-admin .wp-list-table td,
+    .variant-notifications-admin .wp-list-table th {
+        padding: 8px 5px;
+    }
+    
+    /* Stack stats cards on mobile */
+    .variant-notifications-admin div[style*="display: flex"] {
+        flex-direction: column !important;
+    }
+    
+    .variant-notifications-admin .card[style*="min-width"] {
+        min-width: auto !important;
+    }
+}
+
+/* Pagination styling */
+.variant-notifications-admin .tablenav .pagination-links {
+    display: inline-block;
+}
+
+.variant-notifications-admin .tablenav .pagination-links a,
+.variant-notifications-admin .tablenav .pagination-links span {
+    padding: 3px 6px;
+    margin: 0 2px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    background: #f7f7f7;
+}
+
+.variant-notifications-admin .tablenav .pagination-links .current {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+}
+
+/* Bulk actions improvements */
+.variant-notifications-admin .bulkactions select {
+    margin-right: 5px;
+}
+
+/* Loading states */
+.variant-notifications-admin .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
