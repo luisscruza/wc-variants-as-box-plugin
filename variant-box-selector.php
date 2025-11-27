@@ -49,7 +49,7 @@ add_filter('woocommerce_dropdown_variation_attribute_options_html', function ($h
         }
 
         $boxes .= sprintf(
-            '<div class="%s" data-attribute="%s" data-value="%s">%s</div>',
+            '<div class="%s" data-attribute="%s" id="variantboxid" data-value="%s">%s</div>',
             esc_attr($class),
             esc_attr($select_name),
             esc_attr($option),

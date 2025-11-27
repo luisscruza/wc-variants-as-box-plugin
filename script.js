@@ -20,7 +20,6 @@ jQuery(document).ready(function ($) {
         if (select.length) {
             select.val(value).trigger('change');
 
-            // Mark as selected visually
             $(this).siblings().removeClass('selected');
             $(this).addClass('selected');
         } else {
