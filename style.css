@@ -77,3 +77,76 @@
     font-weight: 500;
     text-align: center;
 }
+
+.notify-me-form {
+    display: none;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.notify-me-form h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.notify-email-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.notify-submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0071a1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.notify-submit-btn:hover {
+    background-color: #005177;
+}
+
+.notify-submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.notify-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: none;
+}
+
+.notify-message .success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.notify-message .error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
